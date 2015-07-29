@@ -1,0 +1,34 @@
+Haskell Exercises
+
+CMSC 331
+
+Spring 2014
+
+Prepare a Haskell program that includes the following function definitions and PutStrLn calls to show that they work as intended. The program needs to run on the GL platforms. As before, use the UNIX script command to list the program and the results. Email the file to me and the TA Atul {nicholas,atul7}@umbc.edu no later than midnight Thursday May 8. Work submitted before Tuesday May 6 will be eligible for extra credit.
+
+1. Define a function elem that decides if a value is an element of a list. (Note that elem is already a built-in function in Haskell.) The signature would be:
+
+elem :: Eq a => a -> [a] -> Bool
+
+2. Using a high order function, define a function replicate :: Int -> a -> [a] that produces a list of identical elements. For example,
+
+> replicate 3 "tsk" 
+["tsk","tsk","tsk"]
+
+3. Define a function halve :: [a] → ([ a], [a]) that splits any list into two halves. Extra credit may be awarded for solutions that don't use the !! operator, or the take function. For example:
+
+> halve [1,2,3,4,5,6]
+([1, 2, 3], [4, 5, 6])
+> halve [1, 2, 3]
+([1, 2], [3]) 
+> halve []
+([],[])
+
+4. For any positive integer k, we can compute the sum of the divisors of k. For example, sumOfDivisors 8 would be 1+2+4=7. But sumOfDivisors 6 is 6, since 1+2+3=6. A number that equals the sum of its divisors is said to be perfect . Implement the sumOfDivisors function. Compute sumOfDivisors 496.
+
+5. Define a recursive function merge :: Ord a ⇒ [a] → [a] → [a] that merges two sorted lists to give a single sorted list. Your definition should be defined using explicit recursion. For example,
+
+> merge [2,5,6] [1,3,4]
+[1,2,3,4,5,6]
+
+6. Using the merge and halve functions from other exercises, define a recursive function msort :: Ord a ⇒ [a] → [a] that implements merge sort. In the merge sort, the empty list and singleton lists are already sorted, and any other list is sorted by merging together the two lists that result from sorting the two halves of the list separately.

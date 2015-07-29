@@ -1,0 +1,35 @@
+Script started on Sat 03 May 2014 10:56:39 AM EDT
+linux3[8]% ghci birky-haskell-project.hs
+GHCi, version 7.0.4: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer-gmp ... linking ... done.
+Loading package base ... linking ... done.
+[1 of 1] Compiling Main             ( birky-haskell-project.hs, interpreted )
+Ok, modules loaded: Main.
+[?1h=*Main> elem' 1 [1,2,3]
+[?1l>True
+[?1h=*Main> elem' 0 [1,2,3]
+[?1l>False
+[?1h=*Main> replicate' 3 "tsk"
+[?1l>["tsk","tsk","tsk"]
+[?1h=*Main> halve [1,2,3,4,5,6]
+[?1l>([1,2,3],[4,5,6])
+[?1h=*Main> halve [1,2,3]
+[?1l>([1,2],[3])
+[?1h=*Main> halve []
+[?1l>([],[])
+[?1h=*Main> sumOfDivisors 8
+[?1l>7
+[?1h=*Main> sumOfDivisors 6
+[?1l>6
+[?1h=*Main> sumOfDivisors 496
+[?1l>496
+[?1h=*Main> merge' [2,5,6] [1,3,4]
+[?1l>[1,2,3,4,5,6]
+[?1h=*Main> msort [2,4,6,1,3,5]
+[?1l>[1,2,3,4,5,6]
+[?1h=*Main> :q
+[?1l>Leaving GHCi.
+linux3[9]% ^Dexit
+
+Script done on Sat 03 May 2014 10:58:10 AM EDT
